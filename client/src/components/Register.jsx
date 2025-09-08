@@ -1,0 +1,43 @@
+import React from 'react'
+import { assets } from '../assets/assets'
+
+function Register() {
+  return (
+    <div className='pt-20 flex justify-center'>
+      <div className='bg-white shadow-xl rounded-lg px-16 pb-4 pt-4'>
+        <div className='flex flex-col items-center gap-1 mb-4'>
+            <img src={assets.user1} alt="user" className='w-15 h-15 rounded-full bg-teal-400 p-2 shadow-lg hover:shadow-xl transition' />
+            <h1 className='text-2xl font-semibold font-serif'>Create Account</h1>
+            <span className='text-base font-serif'>Register to get conected to your suitable and most preferred Job today.</span>
+        </div>
+        <form action="" className='flex flex-col gap-7'>
+          <div className='flex flex-col gap-2'>
+            <label htmlFor="username">Username</label>
+            <input type="text" placeholder='Enter your username' className='border border-teal-400 p-2 rounded-lg' />
+          </div>
+          <div className='flex flex-col gap-2'>
+            <label htmlFor="email">Email</label>
+            <input type="text" placeholder='Enter email' className='border border-teal-400 p-2 rounded-lg' />
+          </div>
+          <div className='flex flex-col gap-2'>
+            <label htmlFor="password">Password</label>
+            <input type="password" placeholder='Enter password' className='border border-teal-400 p-2 rounded-lg' />
+          </div>
+          <div className='flex flex-col gap-2'>
+            <label htmlFor="email">Confirm Password</label>
+            <input type="text" placeholder='Enter password to confirm' className='border border-teal-400 p-2 rounded-lg' />
+          </div>
+          <div className='flex flex-col gap-2'>
+            <label htmlFor="role">Role</label>
+            <select name="" id="" className='border border-teal-400 p-2 rounded-lg cursor-pointer'>
+              <option value="employer">Employer</option>
+              <option value="job-seeker">Job Seeker</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  )
+}
+
+export default Register
