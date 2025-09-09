@@ -1,4 +1,5 @@
 import { user } from "../Models/user";
+import { generateTokenAndSetCookie } from "../utils/generateTokenAndSetCookie";
 const bcrypt = require("bcryptjs");
 export const signup = async (req, res) => {
   const { email, password, name, role } = req.body;
@@ -25,6 +26,7 @@ export const signup = async (req, res) => {
       verificationTokenExpiresAt: Date.now() + 24 * 60 * 60 * 1000, // 24 hrs
     });
     await user.save();
+    generateTokenAndSetCookie(res, user._id);
   } catch (error) {
     res.status(400).json({ success: false, message: error.message });
   }
