@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const bcrypt = require("bcryptjs");
 
 const userSchema = new mongoose.Schema({
   fullName: { type: String, required: true },
@@ -10,7 +9,19 @@ const userSchema = new mongoose.Schema({
     enum: ["jobseeker", "employer", "admin"],
     default: "jobseeker",
   },
+  lastLogin: {
+    type: Date,
+    default: Date.now,
+  },
+  isVerified: {
+    type: Boolean,
+    default: false,
+  },
   createdAt: { type: Date, default: Date.now },
+  resetPasswordToken: String,
+  resetPasswordExpiresAt: Date,
+  VerificationToken: String,
+  VerificationTokenExpiresAt: Date,
 });
 
 // Hash password before saving it to the database
