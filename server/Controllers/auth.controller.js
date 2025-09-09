@@ -1,33 +1,52 @@
-import { user } from "../Models/user";
-import { generateTokenAndSetCookie } from "../utils/generateTokenAndSetCookie";
+const user = require("../Models/user");
 const bcrypt = require("bcryptjs");
-export const signup = async (req, res) => {
+const {
+  generateTokenAndSetCookie,
+} = require("../utils/generateTokenAndSetCookie");
+const { token } = require("morgan");
+
+const signup = async (req, res) => {
   const { email, password, name, role } = req.body;
+
   try {
     if (!email || !password || !name || !role) {
-      throw new error("All fields are Required");
+      throw new Error("All fields are required");
     }
-    const userAlreadyExist = await user.findone({ email });
+
+    const userAlreadyExist = await user.findOne({ email });
     if (userAlreadyExist) {
       return res
         .status(400)
-        .json({ success: false, message: "User Alredy Exits" });
+        .json({ success: false, message: "User Already Exists" });
     }
-    const hashedPassword = await bcryptjs.hash(password, 10);
-    const VerificationToken = Math.floor(
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    const verificationToken = Math.floor(
       100000 + Math.random() * 900000
     ).toString();
-    const user = new User({
+
+    const newuser = new user({
       email,
       password: hashedPassword,
       name,
       role,
-      VerificationToken,
+      verificationToken,
       verificationTokenExpiresAt: Date.now() + 24 * 60 * 60 * 1000, // 24 hrs
     });
-    await user.save();
-    generateTokenAndSetCookie(res, user._id);
+
+    await newuser.save();
+
+    generateTokenAndSetCookie(res, newuser._id);
+
+    res.status(201).json({
+      success: true,
+      message: "User registered successfully",
+      token,
+    });
   } catch (error) {
     res.status(400).json({ success: false, message: error.message });
   }
 };
+
+module.exports = { signup };
