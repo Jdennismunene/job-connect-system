@@ -17,6 +17,20 @@ import quote from './quote.png'
 import user2 from './user2.jpg'
 import user3 from './user3.jpg'
 import user4 from './user4.jpg'
+import menu from './menu.png'
+import close from './x.png'
+import bcg1 from './bcg1.jpg'
+import bcg2 from './bcg2.jpg'
+import bcg3 from './bcg3.jpg'
+import bcg4 from './bcg4.jpg'
+import bcg5 from './bcg5.jpg'
+import bcg6 from './bcg6.jpg'
+import clock from './clock.png'
+import location from './location.png'
+import wallet from './wallet.png'
+import phone from './phone.png'
+import mail from './mail.png'
+import about_img from './about_img.jpg'
 
 export const assets = {
     briefcase,
@@ -37,7 +51,21 @@ export const assets = {
     quote,
     user2,
     user3,
-    user4
+    user4,
+    menu,
+    close,
+    bcg1,
+    bcg2,
+    bcg3,
+    bcg4,
+    bcg5,
+    bcg6,
+    wallet,
+    clock,
+    location,
+    phone,
+    mail,
+    about_img
 }
 
 export const RecentJobs = [
@@ -50,6 +78,10 @@ export const RecentJobs = [
         price: '$40000 - $42000',
         venue: 'New-York, USA',
         btn: 'Job Details',
+        img1: briefcase,
+        img2: clock,
+        img3: wallet,
+        img4: location
     },
     {
         title: 'Regional Creatie Facilitator',
@@ -60,6 +92,10 @@ export const RecentJobs = [
         price: '$28000 - $32000',
         venue: 'Los-Angeles, USA',
         btn: 'Job Details',
+        img1: briefcase,
+        img2: clock,
+        img3: wallet,
+        img4: location
     },
     {
         title: 'Internal Integration Planner',
@@ -70,6 +106,10 @@ export const RecentJobs = [
         price: '$48000 - $50000',
         venue: 'Texas, USA',
         btn: 'Job Details',
+        img1: briefcase,
+        img2: clock,
+        img3: wallet,
+        img4: location
     },
     {
         title: 'District Intranet Director',
@@ -80,6 +120,10 @@ export const RecentJobs = [
         price: '$42000 - $48000',
         venue: 'Florida, USA',
         btn: 'Job Details',
+        img1: briefcase,
+        img2: clock,
+        img3: wallet,
+        img4: location
     }
 ]
 
@@ -148,4 +192,47 @@ export const testimonials = [
         text2: "Head of Talent Acquisition, North America",
         img: user4
     },
+]
+
+export const slider = [
+    {
+        id: 1,
+        title: "Branding",
+    },
+    {
+        id: 2,
+        title: "Education",
+    },
+    {
+        id: 3,
+        title: "Design",
+    },
+    {
+        id: 4,
+        title: "Agritech",
+    },
+    {
+        id: 5,
+        title: "Business",
+    },
+    {
+        id: 6,
+        title: "Health",
+    },
+]
+
+export const background = [
+    {
+        img: bcg1
+    },
+    {
+        img: bcg2
+    },
+    {
+        img: bcg3
+    },
+    {
+        img: bcg4
+    },
+    
 ]

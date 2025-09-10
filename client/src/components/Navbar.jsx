@@ -27,14 +27,14 @@ function Navbar() {
     }
 
   return (
-    <header className={`flex items-center justify-center fixed py-2 ${isScroll ? 'w-full px-4 bg-gray-700 shadow-md md:px-10 justify-center' : ''}`}>
-      <div className='flex items-center gap-2 pl-24'>
-        <img src={assets.briefcase} alt="briefcase" className='w-8 h-8 pb-1' />
-        <h1 className='text-2xl font-serif font-bold'>Job <span className='text-teal-500 underline underline-offset-4 decoration-1 under-font-light'>Connect</span></h1>
+    <header className={`flex items-center lg:justify-center justify-evenly py-2 ${isScroll ? 'w-full px-4 bg-gray-700 shadow-md md:px-10 fixed justify-center' : ''}`}>
+      <div className='flex items-center gap-2 pl-2 pr-2 lg:pl-6 md:pl-10'>
+        <img src={assets.briefcase} alt="briefcase" className='sm:w-8 sm:h-8 w-6 pb-1' />
+        <h1 className='sm:text-2xl text-lg  font-serif font-bold md:flex gap-1 flex'>Job <span className='text-teal-500 underline underline-offset-4 decoration-1 under-font-light'>Connect</span></h1>
       </div>
 
-      <nav className='mr-10 pr-24 my-2 ml-16 pl-24 '>
-        <ul className={`border border-gray-700 md:flex gap-10 py-2 pl-5 pr-5 rounded-full sm:hidden ${isScroll ? 'text-white' : 'text-teal-500'}`}>
+      <nav className='mr-10 pr-24 my-2 ml-16 pl-24 lg:-ml-12 lg:pr-1 hidden lg:flex'>
+        <ul className={`border border-gray-700 md:flex gap-10 py-2 pl-5 pr-5 rounded-full ${isScroll ? 'text-white' : 'text-teal-500'}`}>
             <Link className={`text-xl font-serif ${isScroll ? 'text-white' : 'text-black font-semibold'} hover:underline underline-offset-4 decoration-1 hover:text-teal-500 under-font-light transition duration-500 ease-in-out`} to="/">Home</Link>
             <Link className={`text-xl font-serif ${isScroll ? 'text-white' : 'text-black font-semibold'} hover:underline underline-offset-4 decoration-1 hover:text-teal-500 under-font-light transition duration-500 ease-in-out`} to="/about">About Us</Link>
             <Link className={`text-xl font-serif ${isScroll ? 'text-white' : 'text-black font-semibold'} hover:underline underline-offset-4 decoration-1 hover:text-teal-500 under-font-light transition duration-500 ease-in-out`} to="/jobs">Jobs</Link>
@@ -42,23 +42,26 @@ function Navbar() {
         </ul>
       </nav>
 
-      <div className='flex gap-5 items-center'>
-        <Link to="/login" className='font-serif font-semibold hover:text-teal-500 text-lg hover:underline underline-offset-4 decoration-1 transition duration-500 ease-in-out'>Login</Link>
+      <div className='flex gap-3 items-center'>
+        <Link to="login" className='font-serif font-semibold hover:text-teal-500 text-lg hover:underline underline-offset-4 decoration-1 transition duration-500 ease-in-out'>Login</Link>
         <button className='bg-teal-500 px-2 py-1 rounded-lg hover:bg-orange-300 transition duration-500 ease-in-out'>
-            <Link to="/register" className='text-lg font-serif font-semibold'>Register</Link>
+            <Link to="register" className='text-lg font-serif font-semibold'>Register</Link>
         </button>
+      </div>
+      <div className='relative sm:left-8 md:left-12 left-1 lg:hidden block'>
+        <img src={assets.menu} alt="menu" className='size-8' onClick={openMenu} />
       </div>
 
       {/*-------mobile part */}
-      <nav>
-        <div>
-
-        </div>
-
-        <ul>
-            
+        <ul ref={sideMenuRef} className='lg:hidden flex flex-col gap-4 w-64 h-screen bg-gray-700 fixed -right-64 top-0 bottom-0 px-10 py-10 transition duration-500 ease-in-out text-white font-serif text-lg'>
+          <div onClick={closeMenu}>
+            <img src={assets.close} alt="close" className='size-8 ' />
+          </div>
+           <Link onClick={closeMenu} className='text-xl font-serif font-semibold'>Home</Link>
+           <Link onClick={closeMenu} className='text-xl font-serif font-semibold'>About Us</Link>
+           <Link onClick={closeMenu} className='text-xl font-serif font-semibold'>Jobs</Link>
+           <Link onClick={closeMenu} className='text-xl font-serif font-semibold'>Contact Us</Link> 
         </ul>
-      </nav>
     </header>
   )
 }
