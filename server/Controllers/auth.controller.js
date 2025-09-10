@@ -4,6 +4,7 @@ const {
   generateTokenAndSetCookie,
 } = require("../utils/generateTokenAndSetCookie");
 const { token } = require("morgan");
+const { sendVerificationEmail } = require("../mailtrap/email");
 
 const signup = async (req, res) => {
   const { email, password, name, role } = req.body;
@@ -38,11 +39,15 @@ const signup = async (req, res) => {
     await newuser.save();
 
     generateTokenAndSetCookie(res, newuser._id);
+    await sendVerificationEmail(newuser.email, verificationToken);
 
     res.status(201).json({
       success: true,
       message: "User registered successfully",
-      token,
+      user: {
+        ...user._doc,
+        password: undefined,
+      },
     });
   } catch (error) {
     res.status(400).json({ success: false, message: error.message });
