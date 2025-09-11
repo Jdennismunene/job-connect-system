@@ -31,6 +31,21 @@ import wallet from './wallet.png'
 import phone from './phone.png'
 import mail from './mail.png'
 import about_img from './about_img.jpg'
+import career_img from './career_img.jpg'
+import connect_img from './connect_img.jpg'
+import explore_img from './explore_img.jpg'
+import upload from './upload.png'
+import zoom from './zoom.jpeg'
+import verified from './verified.jpeg'
+import user5 from './user5.png'
+import company_img1 from './company_img1.jpg'
+import company_img2 from './company_img2.jpg'
+import company_img3 from './company_img3.jpg'
+import award from './award.png'
+import badge from './badge.png'
+import card from './card.png'
+import crown from './crown.png'
+import plus from './plus.png'
 
 export const assets = {
     briefcase,
@@ -65,7 +80,22 @@ export const assets = {
     location,
     phone,
     mail,
-    about_img
+    about_img,
+    career_img,
+    connect_img,
+    explore_img,
+    upload,
+    zoom,
+    verified,
+    user5,
+    company_img1,
+    company_img2,
+    company_img3,
+    award,
+    badge,
+    card, 
+    crown,
+    plus
 }
 
 export const RecentJobs = [
@@ -235,4 +265,59 @@ export const background = [
         img: bcg4
     },
     
+]
+
+export const steps = [
+    {
+        image: user5,
+        title: "Create Account",
+        text: "You need to first create an account to continue connect with our system.",
+        active: false,
+    },
+    {
+        image: upload,
+        title: "Upload CV/Resume",
+        text: "Get to upload your cv for the employers to see your recent work", 
+        active: true
+    },
+    {
+        image: zoom,
+        title: "Find suitable job",
+        text: "Get to search and look into your suitable and desired job.",
+        active: false
+    },
+    {
+        image: verified,
+        title: "Apply Job",
+        text: "Get to apply the job and start working.",
+        active: false
+    }
+]
+
+export const faqs = [
+    {
+        id: 1,
+        question: "Can I upload a CV?",
+        answer: "Yes you can upload your cv, after you have created your account.",
+    },
+    {
+        id: 2,
+        question: "How long will the recruitment process take?",
+        answer: "Depends on the role and application stage",
+    },
+    {
+        id: 3,
+        question: "What does the recruitment and selection process involve?",
+        answer: "Screening, interviews, and assessments.",
+    },
+    {
+        id: 4,
+        question: "Do you recruit for Graduates, Apprentices and Students?",
+        answer: "Yes, we have entry-level programs.",
+    },
+    {
+        id: 5,
+        question: "Can I receive notifications for future jobs?",
+        answer: "Yes, you can subscribe via the platform."
+    }
 ]
