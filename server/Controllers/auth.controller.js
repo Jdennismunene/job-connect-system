@@ -9,6 +9,7 @@ const {
   sendVerificationEmail,
   sendWelcomeEmail,
   sendPasswordRestEmail,
+  sendResetSuccessEmail,
 } = require("../mailtrap/email");
 const user = require("../Models/user");
 
@@ -191,12 +192,33 @@ const resetPassword = async (req, res) => {
     user.resetPasswordToken = undefined;
     user.resetPasswordExpiresAt = undefined;
     await user.save();
-    await sendResetSuccessEmail(user, email);
+    await sendResetSuccessEmail(user.email);
     res
       .status(200)
       .json({ success: true, message: "Password rest Successful" });
   } catch (error) {
     console.log("Error in resetPassword", error);
+    res.status(400).json({ success: false, message: error.message });
+  }
+};
+
+const checkAuth = async (req, res) => {
+  try {
+    const user = await User.findById(req.userId);
+    if (!user) {
+      return res
+        .status(400)
+        .json({ success: false, message: "User not found" });
+    }
+    res.status(200).json({
+      success: true,
+      user: {
+        ...user._doc,
+        password: undefined,
+      },
+    });
+  } catch (error) {
+    console.log("Error in checkAuth", error);
     res.status(400).json({ success: false, message: error.message });
   }
 };
@@ -208,4 +230,5 @@ module.exports = {
   login,
   forgotPassword,
   resetPassword,
+  checkAuth,
 };
