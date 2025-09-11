@@ -20,8 +20,8 @@ const userSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now },
   resetPasswordToken: String,
   resetPasswordExpiresAt: Date,
-  VerificationToken: String,
-  VerificationTokenExpiresAt: Date,
+  verificationToken: String,
+  verificationTokenExpiresAt: Date,
 });
 
 // // Hash password before saving it to the database
