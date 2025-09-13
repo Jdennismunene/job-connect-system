@@ -41,6 +41,11 @@ const signup = async (req, res) => {
       role,
       verificationToken,
       verificationTokenExpiresAt: Date.now() + 24 * 60 * 60 * 1000, // 24 hrs
+      companyName: companyName || "",
+      industry: industry || "",
+      description: description || "",
+      location: location || "",
+      companySize: companySize || "",
     });
 
     await newuser.save();
