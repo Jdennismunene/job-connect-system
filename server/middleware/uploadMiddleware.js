@@ -11,7 +11,7 @@ const storage = multer.diskStorage({
   },
 });
 
-// File filter
+//  does File filter
 const fileFilter = (req, file, cb) => {
   const allowedTypes = [
     "image/jpeg",
@@ -21,7 +21,7 @@ const fileFilter = (req, file, cb) => {
   ];
 
   if (allowedTypes.includes(file.mimetype)) {
-    cb(null, true); // Accept the file
+    cb(null, true); // Accept the file input
   } else {
     cb(
       new Error("Only .jpeg, .jpg, .png, and .pdf formats are allowed"),
