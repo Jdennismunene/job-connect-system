@@ -48,9 +48,8 @@ exports.updateProfile = async (req, res) => {
   }
 };
 
-// ==========================
 // Delete resume
-// ==========================
+
 exports.deleteResume = async (req, res) => {
   try {
     const { resumeUrl } = req.body; // Expect frontend to send the resume URL
@@ -86,9 +85,8 @@ exports.deleteResume = async (req, res) => {
   }
 };
 
-// ==========================
 // Get Public Profile
-// ==========================
+
 exports.getPublicProfile = async (req, res) => {
   try {
     const user = await User.findById(req.params.id).select("-password"); // exclude password
