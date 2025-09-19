@@ -2,9 +2,8 @@ const fs = require("fs");
 const path = require("path");
 const User = require("../Models/user");
 
-// ==========================
 // Update user profile
-// ==========================
+
 exports.updateProfile = async (req, res) => {
   try {
     const user = await User.findById(req.userId);

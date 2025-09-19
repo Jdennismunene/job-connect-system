@@ -10,19 +10,13 @@ const {
 
 const router = express.Router();
 
-// ====================
-// Protected Routes
-// ====================
-
 // Update user profile
 router.put("/profile", verifyToken, updateProfile);
 
 // Delete user resume
 router.delete("/resume", verifyToken, deleteResume);
 
-// ====================
 // Public Routes
-// ====================
 
 // Get a user public profile
 router.get("/:id", getPublicProfile);
