@@ -33,7 +33,6 @@ const ApplicationSchema = new mongoose.Schema({
   },
 });
 
-// Prevent user from submitting more than one application per job
 ApplicationSchema.index({ job: 1, jobSeeker: 1 }, { unique: true });
 
 module.exports = mongoose.model("Application", ApplicationSchema);
