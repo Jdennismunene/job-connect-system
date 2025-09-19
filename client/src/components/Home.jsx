@@ -44,11 +44,12 @@ function Home() {
         </div>
       </div>
 
-      <div className='grid sm:grid-cols-2 gap-2 mt-[34rem] sm:mt-[30rem] lg:mb-10 xl:grid-cols-3 xl:mt-[30rem] max-w-2xl mx-auto overflow-hidden'>
+      <div className='grid sm:grid-cols-2 gap-2 mt-[30rem] sm:mt-[28rem] lg:mb-10 xl:grid-cols-3 xl:mt-[30rem] max-w-2xl mx-auto overflow-hidden bg-teal-800 pr-4 pl-2 py-4 rounded-lg'>
         <div className='flex flex-col gap-1'>
           <label htmlFor="job" className='text-white ml-3 font-semibold xl:flex'>Enter Job or Company</label>
           <input type="text" placeholder='Job Title or company' className='focus:outline-none text-white font-semibold flex-1 px-2 p border-2 border-teal-800 rounded-full shadow-md px-12 sm:px-9 py-2 xl:w-56'      />
         </div>
+
         <div className='flex flex-col gap-1 xl:ml-1'>
           <label htmlFor="location" className='font-semibold text-white ml-3'>Select Location</label>
           <select name="location" id="location" className='cursor-pointer text-white flex items-center rounded-full shadow-md px-2 py-2 border-1 border-teal-800 xl:w-54'>

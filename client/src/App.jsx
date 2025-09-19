@@ -9,7 +9,7 @@ import Jobs from './components/Jobs'
 
 function App() {
   return (
-    <div>
+    <>
     <Navbar />
       <Routes>
         <Route path='/' element={<Home />}/>
@@ -18,7 +18,7 @@ function App() {
         <Route path='/contact' element={<Contact />}/>
         <Route path='/register' element={<Register />}/>
       </Routes>
-    </div>
+    </>
   )
 }
 

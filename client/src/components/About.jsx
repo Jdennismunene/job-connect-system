@@ -21,15 +21,15 @@ function About() {
 
           <div className='flex gap-6'>
             <div>
-              <img src={assets.explore_img} alt="explore_img" className='w-50 h-40 rounded-lg shadow-md hover:shadow-lg' />
+              <img src={assets.explore_img} alt="explore_img" className='w-60 h-40 rounded-lg shadow-md hover:shadow-lg' />
               <span className='font-serif font-semibold'>Explore Opportunities</span>
             </div>
             <div>
-              <img src={assets.career_img} alt="career_img" className='w-50 h-40 rounded-lg shadow-md hover:shadow-lg' />
+              <img src={assets.career_img} alt="career_img" className='w-60 h-40 rounded-lg shadow-md hover:shadow-lg' />
               <span className='font-serif font-semibold'>Career Match</span>
             </div>
             <div>
-              <img src={assets.connect_img} alt="connect_img" className='w-50 h-40 rounded-lg shadow-md hover:shadow-lg' />
+              <img src={assets.connect_img} alt="connect_img" className='w-60 h-40 rounded-lg shadow-md hover:shadow-lg' />
               <span className='font-serif font-semibold'>Connect & Apply</span>
             </div>
           </div>

@@ -46,6 +46,7 @@ import badge from './badge.png'
 import card from './card.png'
 import crown from './crown.png'
 import plus from './plus.png'
+import job_img from './job_img.jpg'
 
 export const assets = {
     briefcase,
@@ -95,7 +96,8 @@ export const assets = {
     badge,
     card, 
     crown,
-    plus
+    plus,
+    job_img
 }
 
 export const RecentJobs = [
@@ -319,5 +321,128 @@ export const faqs = [
         id: 5,
         question: "Can I receive notifications for future jobs?",
         answer: "Yes, you can subscribe via the platform."
+    }
+]
+
+export const jobs = [
+    {
+        title: 'Corporate solutions executive',
+        text: 'Leffler and Sons',
+        service: 'hotels & tourism',
+        time: 'Full time',
+        mins: '10 min ago',
+        price: '$40000 - $42000',
+        venue: 'New-York, USA',
+        btn: 'Job Details',
+        img1: briefcase,
+        img2: clock,
+        img3: wallet,
+        img4: location,
+        img5: job_img
+    },
+    {
+        title: 'Corporate solutions executive',
+        text: 'Leffler and Sons',
+        service: 'Media',
+        time: 'Part time',
+        mins: '12 min ago',
+        price: '$28000 - $32000',
+        venue: 'Los-Angeles, USA',
+        btn: 'Job Details',
+        img1: briefcase,
+        img2: clock,
+        img3: wallet,
+        img4: location,
+        img5: job_img
+    },
+    {
+        title: 'Corporate solutions executive',
+        text: 'Leffler and Sons',
+        service: 'Construction',
+        time: 'Full time',
+        mins: '15 min ago',
+        price: '$48000 - $50000',
+        venue: 'Texas, USA',
+        btn: 'Job Details',
+        img1: briefcase,
+        img2: clock,
+        img3: wallet,
+        img4: location,
+        img5: job_img
+    },
+    {
+        title: 'Corporate solutions executive',
+        text: 'Leffler and Sons',
+        service: 'Commerce',
+        time: 'Full time',
+        mins: '24 min ago',
+        price: '$42000 - $48000',
+        venue: 'Florida, USA',
+        btn: 'Job Details',
+        img1: briefcase,
+        img2: clock,
+        img3: wallet,
+        img4: location,
+        img5: job_img
+    },
+    {
+        title: 'Corporate solutions executive',
+        text: 'Leffler and Sons',
+        service: 'Commerce',
+        time: 'Full time',
+        mins: '24 min ago',
+        price: '$42000 - $48000',
+        venue: 'Florida, USA',
+        btn: 'Job Details',
+        img1: briefcase,
+        img2: clock,
+        img3: wallet,
+        img4: location,
+        img5: job_img
+    },
+    {
+        title: 'Corporate solutions executive',
+        text: 'Leffler and Sons',
+        service: 'Commerce',
+        time: 'Full time',
+        mins: '24 min ago',
+        price: '$42000 - $48000',
+        venue: 'Florida, USA',
+        btn: 'Job Details',
+        img1: briefcase,
+        img2: clock,
+        img3: wallet,
+        img4: location,
+        img5: job_img
+    },
+    {
+        title: 'Corporate solutions executive',
+        text: 'Leffler and Sons',
+        service: 'Commerce',
+        time: 'Full time',
+        mins: '24 min ago',
+        price: '$42000 - $48000',
+        venue: 'Florida, USA',
+        btn: 'Job Details',
+        img1: briefcase,
+        img2: clock,
+        img3: wallet,
+        img4: location,
+        img5: job_img
+    },
+    {
+        title: 'Corporate solutions executive',
+        text: 'Leffler and Sons',
+        service: 'Commerce',
+        time: 'Full time',
+        mins: '24 min ago',
+        price: '$42000 - $48000',
+        venue: 'Florida, USA',
+        btn: 'Job Details',
+        img1: briefcase,
+        img2: clock,
+        img3: wallet,
+        img4: location,
+        img5: job_img
     }
 ]
