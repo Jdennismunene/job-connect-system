@@ -1,5 +1,3 @@
-// backend/routes/userRoutes.js
-
 const express = require("express");
 const { verifyToken } = require("../middleware/verifyToken");
 const {
