@@ -144,3 +144,34 @@ exports.getJobById = async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 };
+
+exports.updateJob = async (req, res) => {
+  try {
+    const job = await Job.findById(req.params.id);
+    if (!job) return res.status(404).json({ message: "Job not found" });
+    if (job.compay.toString() !== req.user._id.toString()) {
+      return res
+        .status(403)
+        .json({ message: " Not authorized to update this job" });
+    }
+    Object.assign(job, req.body);
+    const update = await job.save();
+    res.json(update);
+  } catch (error) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
+exports.deleteJob = async (req, res) => {
+  try {
+  } catch (error) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
+exports.toggleCloseJob = async (req, res) => {
+  try {
+  } catch (error) {
+    res.status(500).json({ message: err.message });
+  }
+};
