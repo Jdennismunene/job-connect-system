@@ -11,11 +11,11 @@ const JobSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please add a description"],
   },
-  employer: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Employer",
-    required: true,
+  Requierments: {
+    type: String,
+    required: [true, "Requierments"],
   },
+
   location: {
     type: String,
     required: [true, "Please add a location"],
