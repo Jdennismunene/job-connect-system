@@ -161,16 +161,36 @@ exports.updateJob = async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 };
-
+// delete job
 exports.deleteJob = async (req, res) => {
   try {
+    const job = await Job.findById(req.params.id);
+    if (!job) return res.status(404).json({ message: "Job not found" });
+    if (job.compay.toString() !== req.user._id.toString()) {
+      return res
+        .status(403)
+        .json({ message: " Not authorized to delete this job" });
+    }
+    await job.deleteOne();
+    res.json({ message: "Job Deleted Successfully" });
   } catch (error) {
     res.status(500).json({ message: err.message });
   }
 };
-
+// toggle close status for job employer
 exports.toggleCloseJob = async (req, res) => {
   try {
+    const job = await Job.findById(req.params.id);
+    if (!job) return res.status(404).json({ message: "Job not found" });
+    if (job.compay.toString() !== req.user._id.toString()) {
+      return res
+        .status(403)
+        .json({ message: " Not authorized to close this job" });
+    }
+
+    job.isClosed = !job.isClosed;
+    await job.save();
+    res.json({ message: "Job marked as closed" });
   } catch (error) {
     res.status(500).json({ message: err.message });
   }
