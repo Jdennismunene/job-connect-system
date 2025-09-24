@@ -15,12 +15,12 @@ function Home() {
   }, [testimonials.length])
 
   return (
-    <section className='pt-8'>
-      <div className='bg-cover bg-center m-auto w-[95%] h-[1150px] sm:h-[900px] md:h-[950px] xl:h-[950px] rounded-xl flex flex-col items-center' style={{backgroundImage: `url(${assets.bcg6})`}}>
-        <h1 className='text-2xl lg:text-4xl py-6 font-serif font-bold text-charcoal-400 mx-12'>Create and Find your Dream Job Today!</h1>
-        <p className='text-lg lg:text-xl mx-3 sm:flex justify-center text-white'>Connecting talent to Opportunity:Unlocking Pathways to Success.</p>
+    <section className='pt-5'>
+      <div className='bg-cover bg-center m-auto w-[95%] h-[650px] sm:h-[630px] md:h-[650px] lg:h-[600px] xl:h-[600px] rounded-xl flex flex-col' style={{backgroundImage: `url(${assets.bcg7})`}}>
+        <h1 className='text-2xl sm:text-3xl lg:text-4xl py-6 font-serif font-bold text-teal-500 mx-12 xl:pt-10'>Create and Find your Dream Job Today!</h1>
+        <p className='text-lg lg:text-2xl xl:mx-12 sm:mx-12 sm:flex text-white'>Connecting talent to Opportunity:Unlocking Pathways to Success.</p>
 
-      <div className='grid grid-cols-3 max-w-xl mt-8 sm:mt-6 gap-4 lg:gap-16'>
+      <div className='grid grid-cols-3 max-w-3xl xl:mt-14 sm:mt-10 gap-4 lg:gap-10 xl:gap-4'>
         <div className='flex flex-col items-center gap-2'>
           <img src={assets.briefcase2} alt="briefcase" className='bg-teal-500 p-3 lg:p-4 lg:w-20 xl:p-2 xl:w-12 rounded-full shadow-md hover:shadow-xl' />
           <div className='flex flex-col'>
@@ -44,21 +44,21 @@ function Home() {
         </div>
       </div>
 
-      <div className='grid sm:grid-cols-2 gap-2 mt-[30rem] sm:mt-[28rem] lg:mb-10 xl:grid-cols-3 xl:mt-[30rem] max-w-2xl mx-auto overflow-hidden bg-teal-800 pr-4 pl-2 py-4 rounded-lg'>
+      <div className='grid xl:grid-cols-4 sm:grid-cols-2 lg:grid-cols-3 sm:mx-4 xl:mx-12 bg-teal-500 py-8 px-8 rounded-xl xl:mt-[13rem] sm:mt-[9rem] md:mt-[15rem] lg:mt-[10rem] sm:gap-4'>
         <div className='flex flex-col gap-1'>
           <label htmlFor="job" className='text-white ml-3 font-semibold xl:flex'>Enter Job or Company</label>
-          <input type="text" placeholder='Job Title or company' className='focus:outline-none text-white font-semibold flex-1 px-2 p border-2 border-teal-800 rounded-full shadow-md px-12 sm:px-9 py-2 xl:w-56'      />
+          <input type="text" placeholder='Job Title or company' className='focus:outline-none text-white font-semibold flex-1 px-2 p border-2 border-gray-200 rounded-full shadow-md px-12 sm:px-9 py-2 xl:w-56'/>
         </div>
 
         <div className='flex flex-col gap-1 xl:ml-1'>
           <label htmlFor="location" className='font-semibold text-white ml-3'>Select Location</label>
-          <select name="location" id="location" className='cursor-pointer text-white flex items-center rounded-full shadow-md px-2 py-2 border-1 border-teal-800 xl:w-54'>
+          <select name="location" id="location" className='cursor-pointer text-white flex items-center rounded-full shadow-md px-2 py-2 border-1 border-gray-200 xl:w-64'>
             <option value="it">Nairobi</option>
           </select>
         </div>
         <div className='flex flex-col gap-1 xl:ml-1'>
           <label htmlFor="location" className='font-semibold text-white ml-3'>Select Category</label>
-          <select name="location" id="location" className='cursor-pointer text-white flex items-center rounded-full shadow-md px-2 py-2 border-1 border-teal-800 xl:w-54'>
+          <select name="location" id="location" className='cursor-pointer text-white flex items-center rounded-full shadow-md px-2 py-2 border-1 border-gray-200 xl:w-64'>
             <option value="it">Full Stack Development</option>
           </select>
         </div>

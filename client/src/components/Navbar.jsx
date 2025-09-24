@@ -42,7 +42,7 @@ function Navbar() {
         </ul>
       </nav>
 
-      <div className='flex gap-3 items-center'>
+      <div className='flex gap-4 lg:gap-8 ml-2 items-center'>
         <Link to="login" className='font-serif font-semibold hover:text-teal-500 text-lg hover:underline underline-offset-4 decoration-1 transition duration-500 ease-in-out'>Login</Link>
         <button className='bg-teal-500 px-2 py-1 rounded-lg hover:bg-orange-300 transition duration-500 ease-in-out'>
             <Link to="register" className='text-lg font-serif font-semibold'>Register</Link>
@@ -57,10 +57,10 @@ function Navbar() {
           <div onClick={closeMenu}>
             <img src={assets.close} alt="close" className='size-8 ' />
           </div>
-           <Link onClick={closeMenu} className='text-xl font-serif font-semibold'>Home</Link>
-           <Link onClick={closeMenu} className='text-xl font-serif font-semibold'>About Us</Link>
-           <Link onClick={closeMenu} className='text-xl font-serif font-semibold'>Jobs</Link>
-           <Link onClick={closeMenu} className='text-xl font-serif font-semibold'>Contact Us</Link> 
+           <Link to='/' onClick={closeMenu} className='text-xl font-serif font-semibold'>Home</Link>
+           <Link to='/about' onClick={closeMenu} className='text-xl font-serif font-semibold'>About Us</Link>
+           <Link to='/jobs' onClick={closeMenu} className='text-xl font-serif font-semibold'>Jobs</Link>
+           <Link to='/contact' onClick={closeMenu} className='text-xl font-serif font-semibold'>Contact Us</Link> 
         </ul>
     </header>
   )

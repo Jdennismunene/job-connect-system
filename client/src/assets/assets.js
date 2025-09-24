@@ -25,6 +25,7 @@ import bcg3 from './bcg3.jpg'
 import bcg4 from './bcg4.jpg'
 import bcg5 from './bcg5.jpg'
 import bcg6 from './bcg6.jpg'
+import bcg7 from './bcg7.jpg'
 import clock from './clock.png'
 import location from './location.png'
 import wallet from './wallet.png'
@@ -47,6 +48,14 @@ import card from './card.png'
 import crown from './crown.png'
 import plus from './plus.png'
 import job_img from './job_img.jpg'
+import dashboard from './dashboard.png'
+import applied from './chart-spline.png'
+import notification from './bell.png'
+import db_img1 from './db_img1.png'
+import hiring_img from './hiring_img.png'
+import save from './bookmark.png'
+import sideMenuOpen from './caret-right-circle.png'
+import sideMenuClose from './caret-left-circle.png'
 
 export const assets = {
     briefcase,
@@ -76,6 +85,7 @@ export const assets = {
     bcg4,
     bcg5,
     bcg6,
+    bcg7,
     wallet,
     clock,
     location,
@@ -97,7 +107,15 @@ export const assets = {
     card, 
     crown,
     plus,
-    job_img
+    job_img,
+    dashboard,
+    applied,
+    notification,
+    db_img1,
+    hiring_img,
+    save,
+    sideMenuOpen,
+    sideMenuClose
 }
 
 export const RecentJobs = [
@@ -113,7 +131,8 @@ export const RecentJobs = [
         img1: briefcase,
         img2: clock,
         img3: wallet,
-        img4: location
+        img4: location,
+        save_img: save
     },
     {
         title: 'Regional Creatie Facilitator',
@@ -127,7 +146,8 @@ export const RecentJobs = [
         img1: briefcase,
         img2: clock,
         img3: wallet,
-        img4: location
+        img4: location,
+        save_img: save
     },
     {
         title: 'Internal Integration Planner',
@@ -141,7 +161,8 @@ export const RecentJobs = [
         img1: briefcase,
         img2: clock,
         img3: wallet,
-        img4: location
+        img4: location,
+        save_img: save
     },
     {
         title: 'District Intranet Director',
@@ -155,7 +176,8 @@ export const RecentJobs = [
         img1: briefcase,
         img2: clock,
         img3: wallet,
-        img4: location
+        img4: location,
+        save_img: save
     }
 ]
 
@@ -444,5 +466,232 @@ export const jobs = [
         img3: wallet,
         img4: location,
         img5: job_img
+    }
+]
+
+export const dashboardJobs = [
+    {
+        title: "UI/UX Designer",
+        category: "Full Time",
+        openings: "12",
+        applications: "135",
+        status: "active"
+    },
+    {
+        title: "Full Stack Developer",
+        category: "Full Time",
+        openings: "08",
+        applications: "100",
+        status: "inactive"
+    },
+    {
+        title: "DevOps",
+        category: "Internship",
+        openings: "12",
+        applications: "05",
+        status: "active"
+    },
+    {
+        title: "Android Developer",
+        category: "Full Time",
+        openings: "04",
+        applications: "45",
+        status: "active"
+    },
+    {
+        title: "IOS Developer",
+        category: "Full Time",
+        openings: "18",
+        applications: "96",
+        status: "inactive"
+    }
+]
+
+export const CurrentJobs = [
+    {
+        title: 'Forward Regional Director',
+        text: 'Bauch, Schuppe and Schullist Co',
+        service: 'hotels & tourism',
+        time: 'Full time',
+        date: '18th May',
+        price: '$40000 - $42000',
+        venue: 'New-York, USA',
+        btn: 'Job Details',
+        img1: briefcase,
+        img2: clock,
+        img3: wallet,
+        img4: location,
+        save_img: save
+    },
+    {
+        title: 'Regional Creatie Facilitator',
+        text: 'Wisozk - Becker Co',
+        service: 'Media',
+        time: 'Part time',
+        date: '18th May',
+        price: '$28000 - $32000',
+        venue: 'Los-Angeles, USA',
+        btn: 'Job Details',
+        img1: briefcase,
+        img2: clock,
+        img3: wallet,
+        img4: location,
+        save_img: save
+    },
+    {
+        title: 'Internal Integration Planner',
+        text: 'Mraz- Quigley and Feest Inc',
+        service: 'Construction',
+        time: 'Full time',
+        date: '18th May',
+        price: '$48000 - $50000',
+        venue: 'Texas, USA',
+        btn: 'Job Details',
+        img1: briefcase,
+        img2: clock,
+        img3: wallet,
+        img4: location,
+        save_img: save
+    },
+    {
+        title: 'District Intranet Director',
+        text: 'VonRueden - Weber Co',
+        service: 'Commerce',
+        time: 'Full time',
+        date: '18th May',
+        price: '$42000 - $48000',
+        venue: 'Florida, USA',
+        btn: 'Job Details',
+        img1: briefcase,
+        img2: clock,
+        img3: wallet,
+        img4: location,
+        save_img: save
+    }
+]
+
+export const AppliedJobs = [
+    {
+        title: 'Forward Regional Director',
+        text: 'Bauch, Schuppe and Schullist Co',
+        service: 'hotels & tourism',
+        time: 'Full time',
+        date: '1 day ago',
+        price: '$40000 - $42000',
+        venue: 'New-York, USA',
+        btn: 'Job Details',
+        img1: briefcase,
+        img2: clock,
+        img3: wallet,
+        img4: location,
+        save_img: save
+    },
+    {
+        title: 'Regional Creatie Facilitator',
+        text: 'Wisozk - Becker Co',
+        service: 'Media',
+        time: 'Part time',
+        date: '1 day ago',
+        price: '$28000 - $32000',
+        venue: 'Los-Angeles, USA',
+        btn: 'Job Details',
+        img1: briefcase,
+        img2: clock,
+        img3: wallet,
+        img4: location,
+        save_img: save
+    },
+    {
+        title: 'Internal Integration Planner',
+        text: 'Mraz- Quigley and Feest Inc',
+        service: 'Construction',
+        time: 'Full time',
+        date: '1 day ago',
+        price: '$48000 - $50000',
+        venue: 'Texas, USA',
+        btn: 'Job Details',
+        img1: briefcase,
+        img2: clock,
+        img3: wallet,
+        img4: location,
+        save_img: save
+    },
+    {
+        title: 'District Intranet Director',
+        text: 'VonRueden - Weber Co',
+        service: 'Commerce',
+        time: 'Full time',
+        date: '1 day ago',
+        price: '$42000 - $48000',
+        venue: 'Florida, USA',
+        btn: 'Job Details',
+        img1: briefcase,
+        img2: clock,
+        img3: wallet,
+        img4: location,
+        save_img: save
+    }
+]
+
+export const JobPosted = [
+    {
+        title: 'Forward Regional Director',
+        text: 'Bauch, Schuppe and Schullist Co',
+        service: 'hotels & tourism',
+        time: 'Full time',
+        date: '10 mins ago',
+        price: '$40000 - $42000',
+        venue: 'New-York, USA',
+        btn: 'Edit Details',
+        img1: briefcase,
+        img2: clock,
+        img3: wallet,
+        img4: location,
+        save_img: save
+    },
+    {
+        title: 'Regional Creatie Facilitator',
+        text: 'Wisozk - Becker Co',
+        service: 'Media',
+        time: 'Part time',
+        date: '10 mins ago',
+        price: '$28000 - $32000',
+        venue: 'Los-Angeles, USA',
+        btn: 'Edit Details',
+        img1: briefcase,
+        img2: clock,
+        img3: wallet,
+        img4: location,
+        save_img: save
+    },
+    {
+        title: 'Internal Integration Planner',
+        text: 'Mraz- Quigley and Feest Inc',
+        service: 'Construction',
+        time: 'Full time',
+        date: '10 mins ago',
+        price: '$48000 - $50000',
+        venue: 'Texas, USA',
+        btn: 'Edit Details',
+        img1: briefcase,
+        img2: clock,
+        img3: wallet,
+        img4: location,
+        save_img: save
+    },
+    {
+        title: 'District Intranet Director',
+        text: 'VonRueden - Weber Co',
+        service: 'Commerce',
+        time: 'Full time',
+        date: '10 mins ago',
+        price: '$42000 - $48000',
+        venue: 'Florida, USA',
+        btn: 'Edit Details',
+        img1: briefcase,
+        img2: clock,
+        img3: wallet,
+        img4: location,
+        save_img: save
     }
 ]

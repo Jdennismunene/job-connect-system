@@ -1,10 +1,11 @@
 import React from 'react'
 import { assets } from '../assets/assets'
+import { Link } from 'react-router-dom'
 
 function Register() {
   return (
-    <div className='pt-20 flex justify-center'>
-      <div className='bg-white shadow-xl rounded-lg px-16 pb-4 pt-4'>
+    <section className='pt-10 flex justify-center mb-10'>
+      <div className='bg-white shadow-xl rounded-lg px-16 mx-4 pb-4 pt-4'>
         <div className='flex flex-col items-center gap-1 mb-4'>
             <img src={assets.user1} alt="user" className='w-15 h-15 rounded-full bg-teal-400 p-2 shadow-lg hover:shadow-xl transition' />
             <h1 className='text-2xl font-semibold font-serif'>Create Account</h1>
@@ -34,9 +35,11 @@ function Register() {
               <option value="job-seeker">Job Seeker</option>
             </select>
           </div>
+          <button className='bg-teal-500 px-4 py-2 rounded-full cursor-pointer shadow-md hover:shadow-lg hover:bg-orange-500'>Submit</button>
         </form>
+        <p className='mt-4'>By registering you are agreeing to the terms and conditions.</p>
       </div>
-    </div>
+    </section>
   )
 }
 
